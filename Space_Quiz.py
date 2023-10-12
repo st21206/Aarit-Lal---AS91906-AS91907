@@ -9,6 +9,10 @@ root = Tk()
 root.title("Aarit's Space Quiz")
 root.geometry('600x650')
 
+#Add text to font
+def add_it():
+    pass
+
 #get width & height of screen
 width= root.winfo_screenwidth()
 height= root.winfo_screenheight()
@@ -17,17 +21,20 @@ height= root.winfo_screenheight()
 root.geometry("%dx%d" % (width, height))
 root.resizable(True, True)
 
-# put image in a label and place label as background
+#Defining background
+Space_Background = PhotoImage(file='images/Space_Background_Image.png')
+
+#labels
+my_label = Label (root, image=Space_Background)
+my_label.pack(pady=20)
+
+"""# put image in a label and place label as background
 imgTemp = Image.open("/Users/admiralaarit/Desktop/Space_Background_Image.png")
 img2 = imgTemp.resize((width,height))
 img = ImageTk.PhotoImage(img2)
 
 label = Label(root,image=img)
-label.pack(side='top',fill=Y,expand=True)
-
-#Add text to font
-def add_it():
-    pass
+label.pack(side='top',fill=Y,expand=True)"""
 
 #Text 2.0, implementing a entry box
 entry_box = Entry(root, font=('Helvetica', 24))
