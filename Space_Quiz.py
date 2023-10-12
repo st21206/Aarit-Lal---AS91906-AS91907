@@ -8,7 +8,7 @@ from tkinter import messagebox
 root = Tk()
 root.title("window")
 
-#get wigth & height of screen
+#get width & height of screen
 width= root.winfo_screenwidth()
 height= root.winfo_screenheight()
 
@@ -31,7 +31,13 @@ def age():
 my_label = Label(root, text='Enter the Year you were Born to Continue', font=('Helvetica', 24))
 my_label.pack(pady = 20)
 
+#Entry Boxes
+my_entry = Entry(root, font=('Helvetica', 18))
+my_entry.pack(pady=20)
 
+#Buttons
+my_button = Button(root, text='Enter', font=('Helvetica', 24), command =age)
+my_button.pack(pady=20)
 
 
 
