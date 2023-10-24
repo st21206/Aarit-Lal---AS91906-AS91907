@@ -56,3 +56,14 @@ class SpaceQuiz:
         # Create a quit button
         self.quit_button = tk.Button(self.root, text="Quit", command=self.root.destroy, font=('Helvetica', 30), bg='red', fg='white')
         self.quit_button.place(relx=0.05, rely=0.05)  #Place the Quit button in the top left corner
+
+        #Method to validate age input and start the quiz if the age is valid
+    def check_age(self, age):
+        try:
+            age = int(age)
+            if age >= 4:
+                self.setup_quiz_window()  #Call setup_quiz_window method to start the quiz
+            else:
+                messagebox.showinfo("Error", "Sorry, you must be 4 years or older to take the quiz.")  #Show error message if age is less than 4
+        except ValueError:
+            messagebox.showinfo("Error", "Please enter a valid age.")  #Show error message if age is not a valid number
