@@ -144,3 +144,38 @@ class SpaceQuiz:
             self.option_buttons[i].config(text=option_text, state=tk.NORMAL, bg='SystemButtonFace')
         self.selected_answer.set(-1)  # Deselect all options
 
+    #Method to handle the Next button click
+    def next_question(self):
+        selected_answer_index = self.selected_answer.get()
+        #Check if an answer is selected, if not, show an error message
+        if selected_answer_index == -1:
+            messagebox.showinfo("Error", "Please select an option.")
+        else:
+            self.user_answers.append(selected_answer_index)  # Add the selected answer to user's answers
+            self.current_question += 1  # Move to the next question
+            self.load_question()  # Load the next question
+
+    #Method to display the quiz result
+    def show_result(self):
+        #Calculate the score by comparing user's answers with correct answers
+        score = sum(1 for user_answer, correct_answer in zip(self.user_answers, self.correct_answers) if user_answer == correct_answer)
+        #Show a messagebox with the user's score
+        messagebox.showinfo("Result", f"Your Score: {score}/15")
+        self.restart_quiz()  # Restart the quiz after displaying the result
+
+    #Method to restart the quiz
+    def restart_quiz(self):
+        self.asked_questions.clear()  #Clear the set of asked questions
+        for button in self.option_buttons:
+            button.config(state=tk.NORMAL, bg='SystemButtonFace')  #Reset answer buttons
+        self.current_question = 0  #Reset current question index
+        self.user_answers = []  #Clear user's answers list
+        self.load_question()  #Load the first question
+
+# Main entry point of the program
+if __name__ == "__main__":
+    root = tk.Tk()  #Create a tkinter root window
+    app = SpaceQuiz(root)  #Create an instance of the SpaceQuiz class
+    root.mainloop()  #Start the tkinter main event loop
+
+
