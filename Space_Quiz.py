@@ -19,7 +19,7 @@ class SpaceQuiz:
         self.root.bind("<Button-1>", self.reset_colors)  #Bind left mouse button click event to reset_colors method
 
         #Load questions and answers from JSON file
-        with open("test/space_questions.json", "r") as file:
+        with open("space_questions.JSON", "r") as file:
             data = json.load(file)
             self.questions = data["questions"]
             self.options = data["options"]
