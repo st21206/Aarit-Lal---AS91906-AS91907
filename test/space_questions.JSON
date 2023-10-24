@@ -1,0 +1,37 @@
+{
+  "questions": [
+    "Which planet is the biggest in our solar system?",
+    "What is the red planet called?",
+    "What is the name of the star that shines during the day and gives us light and heat?",
+    "Which planet is known as the 'Evening Star' because it appears in the western sky after sunset?",
+    "What is the name of Earth's natural satellite?",
+    "Which planet is known as the 'Ringed Planet'?",
+    "What is the smallest planet in our solar system?",
+    "What is the name of the spacecraft that brought the first humans to the moon?",
+    "Which planet is closest to the sun?",
+    "What is the name of the large, shining object in the night sky that is not a star?",
+    "What is the hottest planet in our solar system?",
+    "What is the name of the galaxy that contains our solar system?",
+    "Which planet is often called Earth's twin?",
+    "What is the name of the force that pulls objects towards the Earth?",
+    "What is the name of the imaginary line that runs from the North Pole to the South Pole through Earth's center?"
+  ],
+  "options": [
+    ["Earth", "Jupiter", "Mars", "Saturn"],
+    ["Mars", "Venus", "Jupiter", "Mercury"],
+    ["Moon", "Sun", "Star", "Earth"],
+    ["Venus", "Mars", "Jupiter", "Saturn"],
+    ["Moon", "Mars", "Sun", "Jupiter"],
+    ["Saturn", "Jupiter", "Uranus", "Neptune"],
+    ["Mercury", "Venus", "Mars", "Earth"],
+    ["Apollo 11", "Space Shuttle", "Saturn V", "Sputnik 1"],
+    ["Mars", "Venus", "Earth", "Mercury"],
+    ["Comet", "Planet", "Moon", "Asteroid"],
+    ["Venus", "Mars", "Mercury", "Earth"],
+    ["Milky Way", "Andromeda", "Orion", "Pegasus"],
+    ["Venus", "Mars", "Earth", "Mercury"],
+    ["Gravity", "Magnetism", "Friction", "Acceleration"],
+    ["Prime Meridian", "Equator", "Tropic of Cancer", "International Date Line"]
+  ],
+  "correct_answers": [1, 1, 1, 0, 0, 2, 3, 0, 3, 2, 0, 0, 1, 0, 1]
+}
