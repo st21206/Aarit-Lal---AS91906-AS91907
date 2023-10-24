@@ -122,3 +122,25 @@ class SpaceQuiz:
     def reset_colors(self, event):
         if self.selected_answer.get() != -1:
             self.option_buttons[self.selected_answer.get()].config(bg='SystemButtonFace', fg='black')  #Reset previous choice color
+
+    #Method to load the next question
+    def load_question(self):
+        #Check if all questions have been asked, if yes, display the result
+        if len(self.asked_questions) == len(self.questions):
+            self.show_result()
+            return
+
+        #Get available questions that have not been asked
+        available_questions = list(set(range(len(self.questions))) - self.asked_questions)
+        self.current_question = random.choice(available_questions)  #Choose a random question from available questions
+
+        self.asked_questions.add(self.current_question)  # Add the current question to asked questions set
+
+        #Update question number and question text labels
+        self.question_number_label.config(text=f"Question {len(self.asked_questions)}/15")
+        self.question_label.config(text=self.questions[self.current_question])
+        #Update answer buttons with options for the current question
+        for i, option_text in enumerate(self.options[self.current_question]):
+            self.option_buttons[i].config(text=option_text, state=tk.NORMAL, bg='SystemButtonFace')
+        self.selected_answer.set(-1)  # Deselect all options
+
