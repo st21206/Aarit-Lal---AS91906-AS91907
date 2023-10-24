@@ -28,3 +28,31 @@ class SpaceQuiz:
         self.user_answers = []
         #Call setup_start_screen method to display the start screen
         self.setup_start_screen()
+
+        #Method to set up the start screen
+    def setup_start_screen(self):
+        #Create a label for the background image
+        start_bg_label = tk.Label(self.root, image=self.bg_img_path)
+        start_bg_label.place(relwidth=1, relheight=1)  #Place the background label to cover the whole window
+
+        #Create and place a label for the title which will be called Space Quiz
+        title_label = tk.Label(self.root, text="Space Quiz", font=('Helvetica', 50, 'bold'))
+        title_label.place(relx=0.5, rely=0.3, anchor='center')  #Position the title label at the center
+
+        #Create a frame for age input widgets
+        age_frame = tk.Frame(self.root)
+        age_frame.place(relx=0.5, rely=0.6, anchor='center')  #Position the frame below the title
+
+        #Create labels, entry box, and start quiz button for age input
+        age_label = tk.Label(age_frame, text="Please enter your age:", font=('Helvetica', 30))
+        age_label.pack()
+
+        age_entry = tk.Entry(age_frame, font=('Helvetica', 30))
+        age_entry.pack()
+
+        start_button = tk.Button(age_frame, text="Start Quiz", command=lambda: self.check_age(age_entry.get()), font=('Helvetica', 30))
+        start_button.pack()
+
+        # Create a quit button
+        self.quit_button = tk.Button(self.root, text="Quit", command=self.root.destroy, font=('Helvetica', 30), bg='red', fg='white')
+        self.quit_button.place(relx=0.05, rely=0.05)  #Place the Quit button in the top left corner
