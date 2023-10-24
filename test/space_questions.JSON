@@ -1,0 +1,37 @@
+{
+  "questions": [
+      "What is the largest planet in our solar system?",
+      "Which planet is known as the Red Planet?",
+      "What is the closest star to Earth?",
+      "What is the fifth planet from the sun?",
+      "Which planet is known as the 'Evening Star'?",
+      "What is the largest moon in the solar system?",
+      "Which planet is known as the 'Ice Giant'?",
+      "What is the smallest planet in our solar system?",
+      "Which planet is known for its beautiful rings?",
+      "What is the hottest planet in our solar system?",
+      "What is the second smallest planet in our solar system?",
+      "Which planet is often called Earth's twin?",
+      "What is the farthest dwarf planet from the sun?",
+      "Which planet is known as the 'Red Spot'?",
+      "What is the largest volcano in the solar system?"
+  ],
+  "options": [
+      ["Earth", "Jupiter", "Mars", "Saturn"],
+      ["Earth", "Mars", "Venus", "Jupiter"],
+      ["Sun", "Moon", "Mars", "Venus"],
+      ["Jupiter", "Saturn", "Mars", "Uranus"],
+      ["Venus", "Mars", "Mercury", "Jupiter"],
+      ["Ganymede", "Titan", "Moon", "Io"],
+      ["Uranus", "Neptune", "Saturn", "Pluto"],
+      ["Venus", "Mars", "Mercury", "Earth"],
+      ["Saturn", "Jupiter", "Uranus", "Neptune"],
+      ["Venus", "Mercury", "Mars", "Earth"],
+      ["Mars", "Mercury", "Venus", "Earth"],
+      ["Venus", "Mars", "Earth", "Mercury"],
+      ["Eris", "Pluto", "Haumea", "Makemake"],
+      ["Jupiter", "Mars", "Earth", "Saturn"],
+      ["Olympus Mons", "Mauna Loa", "Mount Everest", "Mount St. Helens"]
+  ],
+  "correct_answers": [1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0, 1, 2, 0]
+}
