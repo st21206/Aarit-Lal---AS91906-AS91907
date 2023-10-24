@@ -101,3 +101,24 @@ class SpaceQuiz:
             option_button = tk.Button(option_frame, text=option_text, command=lambda i=i: self.process_answer(i), font=('Helvetica', 25), fg='black', width=60)
             option_button.pack(pady=10)
             self.option_buttons.append(option_button)
+
+        #Create Next and Restart Quiz buttons
+        self.next_button = tk.Button(self.root, text="Next", command=self.next_question, font=('Helvetica', 25), bg='blue', fg='black')
+        self.next_button.place(relx=0.90, rely=0.5, anchor='center')  #Position the Next button
+
+        self.restart_button = tk.Button(self.root, text="Restart Quiz", command=self.restart_quiz, font=('Helvetica', 25), bg='blue', fg='black')
+        self.restart_button.place(relx=0.10, rely=0.5, anchor='center')  #Position the Restart Quiz button
+
+        self.load_question()  #Call load_question method to load the first question
+
+    #Method to handle the user's answer selection
+    def process_answer(self, index):
+        if self.selected_answer.get() != -1:
+            self.option_buttons[self.selected_answer.get()].config(bg='SystemButtonFace', fg='black')  #Reset previous choice color
+        self.selected_answer.set(index)
+        self.option_buttons[index].config(bg='orange', fg='white')  #Highlight the new choice
+
+    #Method to reset answer button colors on mouse click
+    def reset_colors(self, event):
+        if self.selected_answer.get() != -1:
+            self.option_buttons[self.selected_answer.get()].config(bg='SystemButtonFace', fg='black')  #Reset previous choice color
