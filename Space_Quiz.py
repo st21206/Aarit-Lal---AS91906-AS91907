@@ -12,7 +12,8 @@ class SpaceQuiz:
         #Initialize the root window
         self.root = root
         self.root.title("Aarit's Space Quiz")  #Set the title of the window
-        self.root.attributes('-fullscreen', True)  #Set the window to fullscreen
+#       self.root.attributes('-fullscreen', True)  #Set the window to fullscreen (didn't work when using a laptop by itself as opposed to using it with a monitor)
+        self.root.state('zoomed')
         self.bg_img_path = ImageTk.PhotoImage(Image.open("images/Space_Background_Image_resized.png"))  #Load and set the background image
         self.asked_questions = set()  #Initialize a set to store asked questions
         self.selected_answer = tk.IntVar(value=-1)  #Initialize selected_answer as IntVar with a default value of -1
